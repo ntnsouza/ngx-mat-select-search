@@ -19,15 +19,16 @@
   ></mat-checkbox>
 
   <input class="mat-select-search-input mat-input-element"
-         autocomplete="off"
-         [type]="type"
-         [formControl]="_formControl"
-         #searchSelectInput
-         (keydown)="_handleKeydown($event)"
-         (keyup)="_handleKeyup($event)"
-         (blur)="onBlur()"
-         [placeholder]="placeholderLabel"
-         [attr.aria-label]="ariaLabel"
+        autocomplete="off"
+        [type]="type"
+        [mask]="mask"
+        [formControl]="_formControl"
+        #searchSelectInput
+        (keydown)="_handleKeydown($event)"
+        (keyup)="_handleKeyup($event)"
+        (blur)="onBlur()"
+        [placeholder]="placeholderLabel"
+        [attr.aria-label]="ariaLabel"
   />
   <mat-spinner *ngIf="searching"
           class="mat-select-search-spinner"
@@ -50,7 +51,7 @@
 </div>
 
 <div *ngIf="_showNoEntriesFound$ | async"
-     class="mat-select-search-no-entries-found">
+    class="mat-select-search-no-entries-found">
   {{noEntriesFoundLabel}}
 </div>
 <!--

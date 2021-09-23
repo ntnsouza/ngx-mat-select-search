@@ -138,6 +138,9 @@ export class MatSelectSearchComponent implements OnInit, OnDestroy, ControlValue
   /** Type of the search input field */
   @Input() type = 'text';
 
+  /** Input mask (ngx-mask) */
+  @Input() mask = '';
+
   /** Label to be shown when no entries are found. Set to null if no message should be shown. */
   @Input() noEntriesFoundLabel = 'Keine Optionen gefunden';
 

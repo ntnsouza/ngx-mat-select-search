@@ -17,8 +17,9 @@ import { CommonModule } from '@angular/common';
 import { MatSelectSearchClearDirective } from './mat-select-search-clear.directive';
 import { ReactiveFormsModule } from '@angular/forms';
 
-export const MatSelectSearchVersion = '3.3.0';
+import { NgxMaskModule } from 'ngx-mask'
 
+export const MatSelectSearchVersion = '3.3.0';
 
 @NgModule({
   imports: [
@@ -28,7 +29,8 @@ export const MatSelectSearchVersion = '3.3.0';
     MatCheckboxModule,
     MatIconModule,
     MatProgressSpinnerModule,
-    MatTooltipModule
+    MatTooltipModule,
+    NgxMaskModule.forRoot(),
   ],
   declarations: [
     MatSelectSearchComponent,
