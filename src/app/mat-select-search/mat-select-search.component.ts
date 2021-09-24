@@ -141,6 +141,9 @@ export class MatSelectSearchComponent implements OnInit, OnDestroy, ControlValue
   /** Input mask (ngx-mask) */
   @Input() mask = '';
 
+  /** Input mask (ngx-mask) */
+  @Input() showMaskedValue = true;
+
   /** Label to be shown when no entries are found. Set to null if no message should be shown. */
   @Input() noEntriesFoundLabel = 'Keine Optionen gefunden';
 
