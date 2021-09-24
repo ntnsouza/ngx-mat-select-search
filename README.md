@@ -1,3 +1,5 @@
+`This is a fork of ngx-mat-select-search that adds input mask support.`
+
 # NgxMatSelectSearch
 [https://github.com/bithost-gmbh/ngx-mat-select-search](https://github.com/bithost-gmbh/ngx-mat-select-search)
 
@@ -16,7 +18,7 @@ Angular component providing an input field for searching / filtering [MatSelect]
 See it in action at [https://stackblitz.com/github/bithost-gmbh/ngx-mat-select-search-example](https://stackblitz.com/github/bithost-gmbh/ngx-mat-select-search-example?file=src%2Fapp%2Fapp.component.html)
 
 **Important Note**: This project is meant as a temporary implementation of [https://github.com/angular/material2/issues/5697](https://github.com/angular/material2/issues/5697).
-The goal is to have an implementation in the official Angular Material repository, 
+The goal is to have an implementation in the official Angular Material repository,
 once [https://github.com/angular/material2/pull/7835](https://github.com/angular/material2/pull/7835)
 is merged.
 
@@ -70,14 +72,14 @@ You can alternatively use it with template driven forms as follows:
 ### Labels
 In order to change the labels, use the inputs specified in the [API](#api) section as follows:
 ```html
-<ngx-mat-select-search [formControl]="bankFilterCtrl" 
-                       placeholderLabel="Find bank..." 
+<ngx-mat-select-search [formControl]="bankFilterCtrl"
+                       placeholderLabel="Find bank..."
                        noEntriesFoundLabel="'no matching bank found'"></ngx-mat-select-search>
 ```
 To use the [i18n](https://angular.io/guide/i18n) API for translation of the labels, add the corresponding `i18n-...` attributes:
 ```html
-<ngx-mat-select-search [formControl]="bankFilterCtrl" 
-                       placeholderLabel="Find bank..." 
+<ngx-mat-select-search [formControl]="bankFilterCtrl"
+                       placeholderLabel="Find bank..."
                        i18n-placeholderLabel
                        noEntriesFoundLabel="'no matching bank found'"
                        i18n-noEntriesFoundLabel></ngx-mat-select-search>
@@ -88,7 +90,7 @@ To use the [i18n](https://angular.io/guide/i18n) API for translation of the labe
 * `@angular/core`: `^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0`,
 * `@angular/material`: `^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0`
 
-For compatibility with `@angular/core`: `^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0`, 
+For compatibility with `@angular/core`: `^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0`,
 use version `1.8.0`.
 
 ### API
@@ -151,9 +153,9 @@ Furthermore, it provides the following inputs:
   /** Show/Hide the search clear button of the search input */
   @Input() hideClearSearchButton = false;
 
-  /** 
-   * Always restore selected options on selectionChange for mode multi (e.g. for lazy loading/infinity scrolling). 
-   * Defaults to false, so selected options are only restored while filtering is active. 
+  /**
+   * Always restore selected options on selectionChange for mode multi (e.g. for lazy loading/infinity scrolling).
+   * Defaults to false, so selected options are only restored while filtering is active.
    */
   @Input() alwaysRestoreSelectedOptionsMulti = false;
 
@@ -163,7 +165,7 @@ Furthermore, it provides the following inputs:
   *  eg: Bank R (Germany) 1 of 6
   */
   @Input() indexAndLengthScreenReaderText = ' of ';
-  
+
   /** Output emitter to send to parent component with the toggle all boolean */
   @Output() toggleAll = new EventEmitter<boolean>();
 
@@ -187,9 +189,9 @@ Custom content with the CSS class `mat-select-search-custom-header-content` can 
 ```
 
 ## Known Problems
-* The currently selected option might be hidden under the search input field when opening the options panel 
+* The currently selected option might be hidden under the search input field when opening the options panel
   and the panel is at the screen border.
-   
+
 ## Support Development
 
 We aim at providing the best service possible by constantly improving `NgxMatSelectSearch` and responding fast to bug reports. We do this fully free of cost.
@@ -213,7 +215,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
 ### Library Build / NPM Package
-Run `npm run build-lib` to build the library and generate an NPM package. 
+Run `npm run build-lib` to build the library and generate an NPM package.
 The build artifacts will be stored in the `dist-lib/` folder.
 
 ### Running unit tests
